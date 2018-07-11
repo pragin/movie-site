@@ -4,14 +4,12 @@ const router = express.Router();
 //Movie model
 const Movie = require('../../models/Movie');
 
-
-
 // @route GET api/movies
 // @desc Get All Items
 // @access Public
 
 router.get('/', (req, res) => {
-    Movie.find().limit(2)
+    Movie.find().limit(10)
         .then(movies =>res.json(movies))
         .catch(err => res.status(404).json({success: false}));
 });
