@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import {Col} from 'react-bootstrap';
+import { Grid, Row, Col } from 'react-bootstrap';
+
 
 export default class Movies extends Component {
     render() {
@@ -7,10 +8,12 @@ export default class Movies extends Component {
         return (
             movies.map(movie => {
                 return (
-                    <div className="movie-box">
-                         <Col  md={6} lg={3}>
+                    <Grid>
+                        <Row className="show-grid">
+                    <Col md={6} lg={3}>
+                        <div className="movie-box">
                             <div className="movie-img">
-                             </div>
+                            </div>
                             <div className="details">
                                 <ul>
                                     <li key={movie._id}>
@@ -20,8 +23,11 @@ export default class Movies extends Component {
                                     </li>
                                 </ul>
                             </div>
-                        </Col>
-                    </div>
+                        </div>
+                    </Col>
+                    </Row>
+                    </Grid>
+
                 );
             })
         )
