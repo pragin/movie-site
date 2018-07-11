@@ -4,6 +4,8 @@ const router = express.Router();
 //Movie model
 const Movie = require('../../models/Movie');
 
+
+
 // @route GET api/movies
 // @desc Get All Items
 // @access Public
