@@ -15,7 +15,7 @@
     "eject": "react-scripts eject"
   },
   "proxy": {
-    "/api/movies": {
+    "/api/*": {
       "target": "http://localhost:5000"
     }
   }

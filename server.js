@@ -7,8 +7,6 @@ const bodyParser = require('body-parser');
 const movies = require('./routes/api/movies');
 const app = express();
 
-
-
 //Bodyparser Middleware
 app.use(bodyParser.json());
 
@@ -29,7 +27,6 @@ app.use(function (req, res, next) {
 });
 
 app.use('/api/movies', movies);
-
 
 const port = process.env.PORT || 5000;
 
