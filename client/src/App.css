@@ -1,15 +1,31 @@
-/* .movie-box {
+.movie-box {
     border: 1px gold solid;
-    padding: 0px;
-    
+    height: 400px;
+    width: 280px;
+    margin: 10px;   
+    text-align: center;
+    padding: 20px;
 }
 
 .movie-img {
-    height: 200px;
-    width: 200px;
+    position: relative;
+    height: 250px;
+    width: 240px;   
     border: 1px blueviolet dotted;
+}
+
+.delete-btn {
+    position: absolute;
+}
+
+.details {
+    border: 1px red solid;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
 }
 
 ul > li {
     list-style: none;
-} */
+} 
+

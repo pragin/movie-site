@@ -9,7 +9,7 @@ const Movie = require('../../models/Movie');
 // @access Public
 
 router.get('/', (req, res) => {
-    Movie.find().limit(10)
+    Movie.find().limit(16)
         .then(movies =>res.json(movies))
         .catch(err => res.status(404).json({success: false}));
 });

@@ -1,37 +1,30 @@
 import React, { Component } from 'react';
-import { Grid, Row, Col } from 'react-bootstrap';
+import { Row, Col, Container } from 'reactstrap';
 
+import MovieItem from './MovieItem';
 
-export default class Movies extends Component {
-    render() {
-        const movies = this.props.movies;
-        return (
-            movies.map(movie => {
-                return (
-                    <Grid>
-                        <Row className="show-grid">
-                    <Col md={6} lg={3}>
-                        <div className="movie-box">
-                            <div className="movie-img">
-                            </div>
-                            <div className="details">
-                                <ul>
-                                    <li key={movie._id}>
-                                        {movie.title}<br />
-                                        {movie.year}<br />
-                                        {movie.director}<br />
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </Col>
-                    </Row>
-                    </Grid>
-
-                );
-            })
-        )
-    }
+class Movies extends Component {
+	render() {
+		let MovieItems;
+		if (this.props.movies) {
+			MovieItems = this.props.movies.map(movie => {
+				return (
+					<Col sm="2" >
+						<MovieItem movie={movie} />
+					</Col>
+				)
+			})
+		}
+		return (
+			<Container fluid>
+				<Row>
+					{MovieItems}
+				</Row>
+			</Container >
+		);
+	}
 
 
 }
+
+export default Movies;
