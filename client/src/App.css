@@ -1,31 +1,16 @@
 .movie-box {
-    border: 1px gold solid;
-    height: 400px;
-    width: 280px;
-    margin: 10px;   
-    text-align: center;
-    padding: 20px;
+    margin-bottom: 5px;
+    margin-top: 10px;
 }
-
-.movie-img {
-    position: relative;
-    height: 250px;
-    width: 240px;   
-    border: 1px blueviolet dotted;
-}
-
 .delete-btn {
-    position: absolute;
+    margin-right: 1px;
+    
 }
 
-.details {
-    border: 1px red solid;
-    text-align: center;
-    padding: 0px;
-    margin: 0px;
+.edit-btn {
+    margin-right: 1px;
+    margin-left: 1px;
+    
 }
 
-ul > li {
-    list-style: none;
-} 
 

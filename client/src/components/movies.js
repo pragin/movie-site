@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col, Container } from 'reactstrap';
+import { Row, Col, Container, CardDeck } from 'reactstrap';
 
 import MovieItem from './MovieItem';
 
@@ -9,8 +9,10 @@ class Movies extends Component {
 		if (this.props.movies) {
 			MovieItems = this.props.movies.map(movie => {
 				return (
-					<Col sm="2" >
-						<MovieItem movie={movie} />
+					<Col sm="6" md="4" lg="2" key={movie._id} >
+					<CardDeck key={movie._id}>
+						<MovieItem key={movie._id} movie={movie} />
+						</CardDeck>
 					</Col>
 				)
 			})
