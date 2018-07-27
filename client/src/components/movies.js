@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Row, Col, Container, CardDeck } from 'reactstrap';
-
 import MovieItem from './MovieItem';
 
 class Movies extends Component {
@@ -19,6 +18,9 @@ class Movies extends Component {
 		}
 		return (
 			<Container fluid>
+			<Row>
+				
+				</Row>
 				<Row>
 					{MovieItems}
 				</Row>

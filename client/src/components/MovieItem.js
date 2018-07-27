@@ -47,8 +47,8 @@ class MovieItem extends Component {
             <CardSubtitle>year: {Movie.year}</CardSubtitle>
             <CardText>{Movie.plot}</CardText>
             {this.state.isMouseInside ?
-              <div>
-                <Button color="danger" className="delete-btn">X</Button>
+              <div className="btn-wrapper">
+                <Button color="danger" className="delete-btn">&times;</Button>
                 <Button color="secondary" className="edit-btn"><FontAwesomeIcon icon={faEdit} /></Button>
               </div> : null}
 

@@ -1,4 +1,8 @@
 import React from 'react';
+import AddMovie from './AddMovie';
+import '../App.css';
+import Modal from './AddMovie';
+
 import {
   Collapse,
   Navbar,
@@ -10,39 +14,69 @@ import {
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
-  DropdownItem } from 'reactstrap';
+  DropdownItem,
+  Button
+} from 'reactstrap';
 
 export default class Example extends React.Component {
   constructor(props) {
     super(props);
 
     this.toggle = this.toggle.bind(this);
+    this.showModal = this.showModal.bind(this);
+    this.hideModal = this.hideModal.bind(this);
+    
     this.state = {
-      isOpen: false
+      isOpen: false,
+      show: false
     };
   }
+
   toggle() {
     this.setState({
       isOpen: !this.state.isOpen
     });
   }
+
+  showModal() {
+    this.setState({
+      show: true
+    })
+    
+    //console.log('Showing form : ' + this.state.show);
+  }
+
+  hideModal() {
+    this.setState({
+      show: false
+    })
+   // console.log('Hidding form : ' + this.state.show);
+  }
+
+
   render() {
     return (
       <div>
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">reactstrap</NavbarBrand>
+          <NavbarBrand href="/">MERN Movie Site</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/components/">Components</NavLink>
+                <Button color="dark" onClick={this.showModal}>Add Movie</Button>
+                {console.log(this.state.show)}
+                <Modal show={this.state.show}  handleClose={this.hideModal}>
+                  <p>Modal</p>
+                  <p>Data</p>
+                </Modal>
               </NavItem>
+
               <NavItem>
                 <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
-                  Options
+                  Genres
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem>
@@ -57,6 +91,9 @@ export default class Example extends React.Component {
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
+              <NavItem>
+                <NavLink href="/components/">Log In</NavLink>
+              </NavItem>
             </Nav>
           </Collapse>
         </Navbar>
@@ -64,3 +101,4 @@ export default class Example extends React.Component {
     );
   }
 }
+

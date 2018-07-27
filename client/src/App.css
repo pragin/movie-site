@@ -1,16 +1,56 @@
 .movie-box {
     margin-bottom: 5px;
     margin-top: 10px;
+    position: relative;
 }
+
 .delete-btn {
     margin-right: 1px;
-    
+    position: absolute;
+    right: 0px;
+    top: 0px;    
 }
 
 .edit-btn {
     margin-right: 1px;
     margin-left: 1px;
-    
+    position: absolute;
+    top: 0px;
+    right: 40px;    
 }
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+
+.modal-main {
+    position: fixed;
+    background: white;
+    padding: 30px;
+    width: 60%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.display-block {
+    display: block;
+}
+
+.display-none {
+    display: none;
+}
+
+.btn-update {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
 
 
