@@ -14,7 +14,7 @@ var movieSchema = mongoose.Schema({
     type: String,
     required: true
   },
-  imdbld: {
+  imdbId: {
     type: String
   },
   language: {
@@ -24,9 +24,6 @@ var movieSchema = mongoose.Schema({
     type: String
   },
   plot:{
-    type: String
-  },
-  plot: {
     type: String
   },
   runtime: {

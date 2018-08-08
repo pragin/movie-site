@@ -9,8 +9,8 @@ class Movies extends Component {
 			MovieItems = this.props.movies.map(movie => {
 				return (
 					<Col sm="6" md="4" lg="2" key={movie._id} >
-					<CardDeck key={movie._id}>
-						<MovieItem key={movie._id} movie={movie} />
+						<CardDeck key={movie._id}>
+							<MovieItem key={movie._id} movie={movie} />
 						</CardDeck>
 					</Col>
 				)
@@ -18,8 +18,7 @@ class Movies extends Component {
 		}
 		return (
 			<Container fluid>
-			<Row>
-				
+				<Row>
 				</Row>
 				<Row>
 					{MovieItems}

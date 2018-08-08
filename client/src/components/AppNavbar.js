@@ -1,5 +1,4 @@
 import React from 'react';
-import AddMovie from './AddMovie';
 import '../App.css';
 import Modal from './AddMovie';
 
@@ -64,7 +63,7 @@ export default class Example extends React.Component {
             <Nav className="ml-auto" navbar>
               <NavItem>
                 <Button color="dark" onClick={this.showModal}>Add Movie</Button>
-                {console.log(this.state.show)}
+                {/* {console.log(this.state.show)} */}
                 <Modal show={this.state.show}  handleClose={this.hideModal}>
                   <p>Modal</p>
                   <p>Data</p>
@@ -72,7 +71,7 @@ export default class Example extends React.Component {
               </NavItem>
 
               <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+                <NavLink href="https://github.com/pragin/movie-site" target="_blank">GitHub</NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>

@@ -10,6 +10,7 @@ const Movie = require('../../models/Movie');
 
 router.get('/', (req, res) => {
     Movie.find().limit(24)
+        .sort({year: -1})
         .then(movies =>res.json(movies))
         .catch(err => res.status(404).json({success: false}));
 });
