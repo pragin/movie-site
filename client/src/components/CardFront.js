@@ -20,8 +20,8 @@ class CardFront extends Component {
               <CardTitle>year : {this.props.movie.year}</CardTitle>
             </CardBody>
           </Card>
+          </div>
         </div>
-      </div>
     )
   }
 }

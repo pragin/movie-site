@@ -38,10 +38,9 @@ class MovieItem extends Component {
     const Movie = this.props.movie;
     return (
       <div className="card-container" onMouseEnter={this.mouseEnter} onMouseLeave={this.mouseLeave}>
-        <div className="card-body">
-          <CardBack movie={Movie} />
-
+        <div className="box-body">
           <CardFront movie={Movie} />
+          <CardBack movie={Movie} />
         </div>
       </div>
     );

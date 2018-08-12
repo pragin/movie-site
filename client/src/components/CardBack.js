@@ -11,15 +11,15 @@ class CardBack extends Component {
   render() {
     return (
       <div className='card-side side-back'>
-        <div className='container-fluid'>
+        {/* <div className='container-fluid aaa'> */}
           <Card >
-            <CardBody>
+            <CardBody className="cardBack-body">
               <CardText>Director : {this.props.movie.director ? this.props.movie.director : "N/A"}</CardText>
               <CardText>Plot : {this.props.movie.plot ? this.props.movie.plot : "N/A"}</CardText>
             </CardBody>
           </Card>
-        </div>
-      </div>
+       {/* </div> */}
+       </div>
     )
   }
 }
